@@ -363,7 +363,7 @@
 
             run.addEventListener("click", async function (e) {
                 // Basic Setup
-                let code = textbox.innerText.split("\n").replaceAll('“', '"').replaceAll('”', '"')
+                let code = textbox.innerText.replaceAll('“', '"').replaceAll('”', '"').split("\n")
                 terminal.innerText = ""
                 terminal.innerHTML = ""
                 terminal.style.color = "rgb(255,255,255)"
