@@ -164,7 +164,7 @@
                         vars[words[6].replaceAll("'", "")] = box.value
                     }
                     else {
-                        if (words[2] !== undefined) {
+                        if (modifiers === undefined) {
                         pError("Type Error: Incorrect type recieved at line ", (i + 1))
                         errored = true
                         return
