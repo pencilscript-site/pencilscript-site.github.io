@@ -153,7 +153,16 @@
                 let box = document.createElement("input")
                 box.type = "text"
                 box.placeholder = val
-                box.style.width = val.length * 3 + "px"
+                if (val !== "") {
+                box.style.width = val.length * 11 + "px"
+                maxWidth = window.innerWidth * 0.8
+                if (Number(box.style.width.replaceAll("px", "")) > maxWidth) {
+                    box.style.width = 79 + "dvw"
+                }
+                }
+                else {
+                    box.style.width = "200px"
+                }
                 if (!empty) {
                 terminal.innerText += "\n"
                 }
@@ -523,4 +532,4 @@
             // Done!
         </script>
     </body>
-</html>
+<!-- </html> n,.;' -->
